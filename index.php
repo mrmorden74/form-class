@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1); // php7 Muss die erste Anweisung in einer Datei sein
-// require_once 'inc/Character.class.php';
-// require_once 'inc/Sorcerer.class.php';
+require_once 'inc/contact-form-config.inc.php';
+require_once 'Form/Form.class.php';
 ?><!DOCTYPE html>
 <html lang="de">
 <head>
@@ -18,7 +18,10 @@ declare(strict_types=1); // php7 Muss die erste Anweisung in einer Datei sein
         <main>
         
     <?php
-
+        //    var_dump($formConf["form"]);
+ 
+        $form = new Form($formConf["form"]);
+        var_dump($form);
     ?>
         </main>
     </div>

@@ -3,8 +3,8 @@ $formConf = [
 	'form' => [
 		'method' => 'post',
 		'action' => '',
-		'enctype' => 'UTF8',
-		'tagAtributes' => [
+		'encType' => 'UTF8',
+		'tagAttributes' => [
 			'class' => 'pure-form pure-form-stacked',
 			'id' => 'contactForm' 
 		]
