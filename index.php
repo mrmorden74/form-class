@@ -21,7 +21,10 @@ require_once 'Form/Form.class.php';
         //    var_dump($formConf["form"]);
  
         $form = new Form($formConf["form"]);
-        var_dump($form);
+        // var_dump($form);
+        $formTxt = $form->render();
+        echo $formTxt;
+        var_dump($formTxt);
     ?>
         </main>
     </div>
