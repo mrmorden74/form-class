@@ -19,15 +19,8 @@ require_once 'Form/FormFields.class.php';
         <main>
         
     <?php
-        //    var_dump($formConf["form"]);
- 
         $form = new Form($formConf);
-        // var_dump($form);
-        $formTxt = $form->render();
-        echo $formTxt;
-        echo '<pre>';
-        var_dump($formTxt);
-        echo '</pre>';
+        echo $form->render();
     ?>
         </main>
     </div>

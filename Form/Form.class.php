@@ -16,11 +16,9 @@ class Form {
 		// $this->tagAttributes = $config['tagAttributes'] ?? 'post';
 
 		foreach($config["form"] as $field => $key) {
-			// echo $field;
 			$this->$field = $key ?? $this->$field;
 		}
 			$this->fieldconf = $config["fields"];
-
 		// Formfelder erzeugen
 		$this->createFormFields();	
 	}
@@ -35,15 +33,17 @@ class Form {
 
 	public function render () : string {
 		$formTxt = $this->open();
-		// var_dump($this->fields);
-		foreach($this->fieldconf as $key => $value) {
-			// var_dump($this->fields[$key]);
-			$$key = new FormField($key, $this->fieldconf[$key]);
-			// var_dump($$key);
-			$formTxt .= $$key->render();
-		}
+		$formTxt .= $this->renderAllFields();
 		$formTxt .= $this->close();
 		return $formTxt;
+	}
+
+	private function renderAllFields() : string {
+		$allFields = '';
+		foreach($this->fields as $field) {
+			$allFields .= $field->render();
+		}
+		return $allFields;
 	}
 
 	public function open () : string {

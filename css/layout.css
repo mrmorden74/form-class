@@ -20,3 +20,12 @@ main {
 	border: 1px solid #CCC;
 	border-top: 0;
 }
+
+.error  {
+	color: darkred;
+}
+
+.errorfield {
+	border: 1px solid darkred;
+	color: darkred;
+}
