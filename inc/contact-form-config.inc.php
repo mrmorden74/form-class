@@ -17,7 +17,7 @@ $formConf = [
 			'id' => 'anrede',
 			'required' => true,
 			'errorClass' => 'field-error',
-			'tagAtrributes' => [
+			'tagAttributes' => [
 				'title' => 'Anrede',
 				'placeholder' => 'Anrede und Titel'
 			]
@@ -27,12 +27,7 @@ $formConf = [
 			'label' => 'Vorname',
 			'id' => 'vorname',
 			'required' => true,
-			'errorClass' => 'field-error',
-			'tagAtrributes' => [
-				'title' => 'Vorname',
-				'placeholder' => 'Vorname'
-			]
-
+			'errorClass' => 'field-error'
 		],
 		'nachname' => [
 			'type' => 'text',
@@ -40,35 +35,24 @@ $formConf = [
 			'id' => 'nachname',
 			'required' => true,
 			'errorClass' => 'field-error',
-			'tagAtrributes' => [
+			'tagAttributes' => [
 				'title' => 'Nachname',
 				'placeholder' => 'Nachname'
 			]
-
 		],
 		'email' => [
-			'type' => 'text',
-			'label' => 'Email',
+			'type' => 'email',
+			'label' => 'E-Mail',
 			'id' => 'email',
 			'required' => true,
-			'errorClass' => 'field-error',
-			'tagAtrributes' => [
-				'title' => 'Email',
-				'placeholder' => 'Email Adresse'
-			]
-
+			'errorClass' => 'field-error'
 		],
 		'nachricht' => [
-			'type' => 'text',
+			'type' => 'textarea',
 			'label' => 'Nachricht',
 			'id' => 'nachricht',
 			'required' => true,
-			'errorClass' => 'field-error',
-			'tagAtrributes' => [
-				'title' => 'Nachricht',
-				'placeholder' => 'Was wollen Sie uns mitteilen?'
-			]
-
+			'errorClass' => 'field-error'
 		]
 	]
 ];

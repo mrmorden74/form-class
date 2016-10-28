@@ -1,30 +1,47 @@
 <?php
 
 class Form {
-	private $method;
-	private $action;
-	private $encType;
-	private $tagAttributes;
+	private $method = 'post';
+	private $action = '';
+	private $encType = '';
+	private $tagAttributes = [];
+	private $fieldconf = [];
+	private $fields =[];
 
-	public function __construct($config) {
+	public function __construct(array $config) {
 
 		// $this->method = $config['method'] ?? 'post';
 		// $this->action = $config['action'] ?? '';
 		// $this->encType = $config['encType'] ?? '';
 		// $this->tagAttributes = $config['tagAttributes'] ?? 'post';
 
-		foreach($config as $field => $key) {
+		foreach($config["form"] as $field => $key) {
 			// echo $field;
-			$this->$field = $key;
+			$this->$field = $key ?? $this->$field;
 		}
+			$this->fieldconf = $config["fields"];
+
+		// Formfelder erzeugen
+		$this->createFormFields();	
 	}
+
+	private function createFormFields() {
+		foreach($this->fieldconf as $key => $value) {
+			// var_dump($this->fields[$key]);
+			$this->fields[$key] = new FormField($key, $value);
+		}
+		// var_dump($this->fields);
+	} 	
 
 	public function render () : string {
 		$formTxt = $this->open();
-		$formTxt .= '<label for="feld1" name="feld1t">Feld 1</label>';
-		$formTxt .= '<input type="text" name="test" id="feld1" >';
-		$formTxt .= '<button type="button" id="submit">Senden</button>';
-		
+		// var_dump($this->fields);
+		foreach($this->fieldconf as $key => $value) {
+			// var_dump($this->fields[$key]);
+			$$key = new FormField($key, $this->fieldconf[$key]);
+			// var_dump($$key);
+			$formTxt .= $$key->render();
+		}
 		$formTxt .= $this->close();
 		return $formTxt;
 	}
