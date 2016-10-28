@@ -13,7 +13,7 @@ class FormFields
     protected $required = false;
 	protected $radioButtons = [];
     protected $tagAttributes = [];
-
+    protected $description = '';
     /**
     *    Konstruktor, initialisiert das Feld
     *    @param array $conf
@@ -38,7 +38,8 @@ class FormFields
 
     public function renderLabel() : string
     {
-        return "<label for='{$this->id}' name='{$this->name}'>{$this->label}</label>";
+        return "<label for='{$this->id}' name='{$this->name}'>{$this->label}</label>".
+         "{$this->description}";
     }
     public function renderField() : string
     {

@@ -35,7 +35,8 @@ class Form {
 				case 'radio':
 					$this->fields[$key] = new Radiobuttons($key, $value);
 					break;
-				case 'selectbox':
+				case 'select':
+					$this->fields[$key] = new Selectbox($key, $value);
 					break;
 				default:
 					$this->fields[$key] = new FormFields($key, $value);

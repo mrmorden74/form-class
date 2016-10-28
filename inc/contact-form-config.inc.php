@@ -12,14 +12,17 @@ $formConf = [
 	],
 	'fields' => [
 		'anrede' => [
-			'type' => 'text',
+			'type' => 'select',
 			'label' => 'Anrede/Titel',
 			'id' => 'anrede',
 			'required' => true,
 			'errorClass' => 'field-error',
-			'tagAttributes' => [
-				'title' => 'Anrede',
-				'placeholder' => 'Anrede und Titel'
+			'multible' => false,
+			'size' => 3,
+			'selectList' => [
+				['label' => 'Herr', 'value' => 'm', 'id' => 'herr', 'autofocus' => true],
+				['label' => 'Frau', 'value' => 'f', 'id' => 'frau'],
+				['label' => 'Firma', 'value' => 'firm', 'id' => 'firma']
 			]
 		],
 		'vorname' => [
@@ -64,18 +67,16 @@ $formConf = [
 		],
 		'kreditkarte' => [
 			'type' => 'radio',
-			'label' => 'Kreditkarten',
+			'label' => 'Kreditkarte',
 			'id' => 'kreditKarte',
 			'required' => false,
 			'errorClass' => 'field-error',
-			'showFieldset' => false,
 			'description' => 'Wie möchten Sie zahlen?',
 			'radioButtons' => [
 				['label' => 'Visa', 'value' => 'v', 'id' => 'visa', 'checked' => true],
 				['label' => 'Mastercard', 'value' => 'm', 'id' => 'master'],
 				['label' => 'American Express', 'value' => 'v', 'id' => 'express']
 			]
-		// SELECTBOX
 		]
 	]
 ];
