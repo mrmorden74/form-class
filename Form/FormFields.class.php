@@ -9,7 +9,7 @@ class FormField {
 	protected $label = '';
 	protected $type = '';
 	protected $value = '';
-	protected $required = true;
+	protected $required = false;
 	protected $tagAttributes = [];
 
 	/**
@@ -50,7 +50,7 @@ class FormField {
 	* Setzte aus den Attributes eine String zusammen.
 	* @return string
 	*/
-	private function getTagAttributes() : string {
+	protected function getTagAttributes() : string {
 		$tagTxt = '';
 		if (isset($this->tagAttributes)) {
 			foreach ($this->tagAttributes as $key => $value) {
