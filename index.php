@@ -4,6 +4,7 @@ require_once 'inc/contact-form-config.inc.php';
 require_once 'Form/Form.class.php';
 require_once 'Form/FormFields.class.php';
 require_once 'Form/Textarea.class.php';
+require_once 'Form/Checkbox.class.php';
 ?><!DOCTYPE html>
 <html lang="de">
 <head>

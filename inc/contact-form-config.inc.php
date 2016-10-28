@@ -53,6 +53,14 @@ $formConf = [
 			'id' => 'nachricht',
 			'required' => true,
 			'errorClass' => 'field-error'
+		],
+		'newsletter' => [
+			'type' => 'checkbox',
+			'label' => 'Newsletter bestellen?',
+			'id' => 'newsletter',
+			'required' => false,
+			'errorClass' => 'field-error',
+			'value' => 'ja'
 		]
 	]
 ];

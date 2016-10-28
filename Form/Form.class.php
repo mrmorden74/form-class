@@ -30,6 +30,7 @@ class Form {
 					$this->fields[$key] = new Textarea($key, $value);
 					break;
 				case 'checkbox':
+					$this->fields[$key] = new Checkbox($key, $value);
 					break;
 				case 'selectbox':
 					break;
