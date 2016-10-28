@@ -21,6 +21,10 @@ class Form {
 
 	public function render () : string {
 		$formTxt = $this->open();
+		$formTxt .= '<label for="feld1" name="feld1t">Feld 1</label>';
+		$formTxt .= '<input type="text" name="test" id="feld1" >';
+		$formTxt .= '<button type="button" id="submit">Senden</button>';
+		
 		$formTxt .= $this->close();
 		return $formTxt;
 	}
