@@ -25,8 +25,17 @@ class Form {
 
 	private function createFormFields() {
 		foreach($this->fieldconf as $key => $value) {
-			// var_dump($this->fields[$key]);
-			$this->fields[$key] = new FormField($key, $value);
+			switch($value['type']) {
+				case 'textarea':
+					$this->fields[$key] = new Textarea($key, $value);
+					break;
+				case 'checkbox':
+					break;
+				case 'selectbox':
+					break;
+				default:
+					$this->fields[$key] = new FormField($key, $value);
+			}
 		}
 		// var_dump($this->fields);
 	} 	
@@ -74,5 +83,9 @@ class Form {
 			}
 		}
 		return $tagTxt;
+	}
+
+	public function getField(string $name) : FormField {
+		return $this->fields[$name];
 	}
 }

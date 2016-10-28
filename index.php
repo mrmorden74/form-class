@@ -3,6 +3,7 @@ declare(strict_types=1); // php7 Muss die erste Anweisung in einer Datei sein
 require_once 'inc/contact-form-config.inc.php';
 require_once 'Form/Form.class.php';
 require_once 'Form/FormFields.class.php';
+require_once 'Form/Textarea.class.php';
 ?><!DOCTYPE html>
 <html lang="de">
 <head>
@@ -20,6 +21,8 @@ require_once 'Form/FormFields.class.php';
         
     <?php
         $form = new Form($formConf);
+        // echo $form->getField('nachname')->render();
+        
         echo $form->render();
     ?>
         </main>
