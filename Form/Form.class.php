@@ -32,10 +32,13 @@ class Form {
 				case 'checkbox':
 					$this->fields[$key] = new Checkbox($key, $value);
 					break;
+				case 'radio':
+					$this->fields[$key] = new Radiobuttons($key, $value);
+					break;
 				case 'selectbox':
 					break;
 				default:
-					$this->fields[$key] = new FormField($key, $value);
+					$this->fields[$key] = new FormFields($key, $value);
 			}
 		}
 		// var_dump($this->fields);

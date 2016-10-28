@@ -1,5 +1,5 @@
 <?php
-class Checkbox extends FormField
+class Checkbox extends FormFields
 {
     public function __construct($name, array $conf)
     {

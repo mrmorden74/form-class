@@ -61,6 +61,21 @@ $formConf = [
 			'required' => false,
 			'errorClass' => 'field-error',
 			'value' => 'ja'
+		],
+		'kreditkarte' => [
+			'type' => 'radio',
+			'label' => 'Kreditkarten',
+			'id' => 'kreditKarte',
+			'required' => false,
+			'errorClass' => 'field-error',
+			'showFieldset' => false,
+			'description' => 'Wie möchten Sie zahlen?',
+			'radioButtons' => [
+				['label' => 'Visa', 'value' => 'v', 'id' => 'visa', 'checked' => true],
+				['label' => 'Mastercard', 'value' => 'm', 'id' => 'master'],
+				['label' => 'American Express', 'value' => 'v', 'id' => 'express']
+			]
+		// SELECTBOX
 		]
 	]
 ];

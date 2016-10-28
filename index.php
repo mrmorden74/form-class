@@ -1,10 +1,11 @@
 <?php
 declare(strict_types=1); // php7 Muss die erste Anweisung in einer Datei sein
+function formAutoLoader($class) {
+    require_once('Form/'.$class.'.class.php');
+}
+spl_autoload_register('formAutoLoader');
+
 require_once 'inc/contact-form-config.inc.php';
-require_once 'Form/Form.class.php';
-require_once 'Form/FormFields.class.php';
-require_once 'Form/Textarea.class.php';
-require_once 'Form/Checkbox.class.php';
 ?><!DOCTYPE html>
 <html lang="de">
 <head>

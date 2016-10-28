@@ -3,7 +3,7 @@
 * Basis Klasse für alle Formularfelder
 * Bildet alle input types außer Radio/Checkbox ab
 */
-class FormField
+class FormFields
 {
     protected $name = '';
     protected $id = '';
@@ -11,6 +11,7 @@ class FormField
     protected $type = '';
     protected $value = '';
     protected $required = false;
+	protected $radioButtons = [];
     protected $tagAttributes = [];
 
     /**

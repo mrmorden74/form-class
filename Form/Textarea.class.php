@@ -1,5 +1,5 @@
 <?php
-class Textarea extends FormField
+class Textarea extends FormFields
 {
     public function __construct($name, array $conf)
     {

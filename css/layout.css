@@ -37,11 +37,22 @@ main {
 	/*width: 100%;*/
 }
 
+.pure-form input[type=radio] {
+	float: left;
+	margin-right: 0.2em;
+	margin-top: 0.3em;
+	
+	/*width: 100%;*/
+}
 .pure-form input[type=checkbox] + label {
 	padding: 0.5em 0.6em;
 }
 
 .textarea {
 	width: 100em;
+}
+
+.fieldset {
+	border: 1px solid black;
 }
 
