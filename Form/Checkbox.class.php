@@ -5,7 +5,7 @@ class Checkbox extends FormField
     {
         parent::__construct($name, $conf);
     }
-    public function renderField()
+    public function renderField() : string
     {
         $txtField = "<input type='{$this->type}' name='{$this->name}'";
         $txtField .= " id='{$this->id}'";
@@ -16,11 +16,12 @@ class Checkbox extends FormField
         // $txtField .= $this->label;
         return $txtField;
     }
-	public function render() {
-	return 
-		$this->renderField().
-		$this->renderLabel().
-		$this->renderError().
-		'';
-	}
+    public function render() : string
+    {
+        return
+        $this->renderField().
+        $this->renderLabel().
+        $this->renderError().
+        '';
+    }
 }

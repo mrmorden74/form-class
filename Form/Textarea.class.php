@@ -5,7 +5,7 @@ class Textarea extends FormField
     {
         parent::__construct($name, $conf);
     }
-    public function renderField()
+    public function renderField() : string
     {
         $txtField = "<textarea name='{$this->name}'";
         $txtField .= " id='{$this->id}'";

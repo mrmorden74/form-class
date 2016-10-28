@@ -29,3 +29,19 @@ main {
 	border: 1px solid darkred;
 	color: darkred;
 }
+.pure-form input[type=checkbox] {
+	float: left;
+	margin-right: 0.5em;
+	margin-top: 0.7em;
+	
+	/*width: 100%;*/
+}
+
+.pure-form input[type=checkbox] + label {
+	padding: 0.5em 0.6em;
+}
+
+.textarea {
+	width: 100em;
+}
+
